@@ -1,0 +1,69 @@
+%\VignetteEngine{knitr::rmarkdown}
+%\VignetteIndexEntry{A ctmc Guide}
+
+
+```{r setup, include=FALSE}
+library(knitr)
+```
+
+# A ctmcd Guide
+
+## Introduction
+
+ctmcd is a package for the estimation of Markov generator matrices (i.e., the parameters of a continuous-time Markov chain) for the special case, that only discrete-time observations are given. The implemented methods to derive these estimates are diagonal adjustment ("DA", Israel et al., 2001), weighted adjustment ("WA", Israel et al., 2001), quasi-optimization ("QO", Kreinin and Sidelnikova, 2001), an instance of the expectation-maximization algorithm ("EM", Bladt and Soerensen, 2005) and a Gibbs Sampler ("GS", Bladt and Soerensen, 2005). For the expectation-maximization algorithm a Wald confidence interval according to the method of Oakes, 1999 can be derived. For the posterior mean estimate from the Gibbs sampler, an equal tailed credibility interval as outlined in Bladt and Soerensen, 2009 is implemented.
+
+```{r}
+library(ctmcd)
+```
+
+## Generator Matrix Estimation
+
+In order to perform a generator matrix estimate, the discrete time data must be available as a matrix of either absolute ("EM", "GS") or relative transition frequencies ("DA", "WA", "QO"), depending on the method employed.
+
+```{r}
+data(tm_abs)
+```
+loads a credit transition example data set. In order to perform a diagonal adjustment generator matrix estimate, this data has to be converted into a matrix of relative transition frequencies first. Then, the gm method can be employed, requiring the time elapsed in the discrete time transition process, which is 1 as the example data has a single-year time horizon and furthermore a method specification, which is "DA" in this case.
+
+```{r}
+tm_rel=rbind((tm_abs/rowSums(tm_abs))[1:7,],c(rep(0,7),1))
+gmda=gm(tm=tm_rel,te=1,method="DA")
+gmda
+```
+
+A maximum likelihood estimate can be obtained by the EM algorithm, additionally requiring a starting value gmguess.
+```{r}
+gm0=matrix(1,8,8)
+diag(gm0)=0
+diag(gm0)=-rowSums(gm0)
+gm0[8,]=0
+
+gmem=gm(tm_abs,te=1,method="EM",gmguess=gm0)
+gmem
+```
+
+
+## Confidence / Credibility Intervals
+Interval estimates of gm objects can only be obtained for the methods "EM" and "GS" by means of the gmci function, e.g., a 95% Wald confidence interval can be obtained by
+
+```{r}
+ciem=gmci(gmem,alpha=0.05)
+```
+
+## Matrix Plot Function
+Both, gm and gmci objects can be visualized by the matrix plot function plotM(), which can be easily accessed by the wrapper function plot().
+
+```{r}
+plot(gmem)
+```
+
+## References
+M. Bladt and M. Soerensen: _Statistical Inference for Discretely Observed Markov Jump Processes._ Journal of the Royal Statistical Society B 67(3):395-410, 2005
+
+M. Bladt and M. Soerensen. _Efficient Estimation of Transition Rates Between Credit Ratings from Observations at Discrete Time Points._ Quantitative Finance, 9(2):147-160, 2009
+
+R. B. Israel et al.: _Finding Generators for Markov Chains via Empirical Transition Matrices, with Applications to Credit Ratings._ Mathematical Finance 11(2):245-265, 2001
+
+E. Kreinin and M. Sidelnikova: _Regularization Algorithms for Transition Matrices._ Algo Research Quarterly 4(1):23-40, 2001
+
+D. Oakes. _Direct calculation of the information matrix via the EM algorithm._ Journal of the Royal Statistical Society: Series B (Statistical Methodology), 61(2):479-482, 1999
