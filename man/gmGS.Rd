@@ -25,7 +25,7 @@ list of prior parameters (Gamma prior)
 number of burn-in iterations
 }
   \item{eps}{
-stop criterion: stop, if change in L1 metric of subsequent iteration steps is below eps at least twice
+stop criterion: stop, if L1 metric between parameter estimates of subsequent iteration steps is below eps at least twice
 }
   \item{niter}{
 stop criterion: stop, if maximum number of iterations is exceeded

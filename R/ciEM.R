@@ -119,13 +119,13 @@ function(x,
   ### Calculate Standard Errors
   CVmat = solve((FI + t(FI)) / 2)
   SEvec = sqrt(diag(CVmat))
-  SEmat = matrix(0, 8, 8)
+  SEmat = matrix(0, nrow(tmabs), nrow(tmabs))
   
   for (k in 1:length(ivec)) {
     SEmat[ivec[k], jvec[k]] = SEvec[k]
   }
   
-  diagse = vector(length = 8)
+  diagse = vector(length = nrow(tmabs))
   for (i in unique(ivec)) {
     elem = jvec[which(ivec == i)]
     if (length(elem) == 1) {

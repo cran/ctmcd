@@ -19,13 +19,13 @@ function(tm,
   est = list()
   
   if (method == "DA") {
-    est$par = gmDA(tmrel = tm, te)
+    est$par = gmDA(tmrel = tm, te, logmethod = logmethod)
     est$method = "Diagonal Adjustment"
   } else if (method == "WA") {
-    est$par = gmWA(tmrel = tm, te)
+    est$par = gmWA(tmrel = tm, te, logmethod = logmethod)
     est$method = "Weighted Adjustment"
   } else if (method == "QO") {
-    est$par = gmQO(tmrel = tm, te)
+    est$par = gmQO(tmrel = tm, te, logmethod = logmethod)
     est$method = "Quasi Optimization"
   } else if (method == "EM") {
     est = gmEM(tmabs = tm, te, gmguess, eps, niter, expmethod, verbose)

@@ -1,5 +1,5 @@
 %\VignetteEngine{knitr::rmarkdown}
-%\VignetteIndexEntry{A ctmc Guide}
+%\VignetteIndexEntry{A ctmcd Guide}
 
 
 ```{r setup, include=FALSE}

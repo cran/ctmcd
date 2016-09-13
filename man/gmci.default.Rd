@@ -57,7 +57,7 @@ gm0[8,]=0
 gmem=gm(tm_abs,te=1,method="EM",gmguess=gm0)
 
 ## Oakes Confidence Interval
-ciEM=gmci(gmem,alpha=0.05)
-ciEM
+ciem=gmci(gmem,alpha=0.05)
+ciem
 }
 }

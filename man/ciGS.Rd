@@ -9,7 +9,7 @@ Function to derive an equal-tailed credibility interval from Gibbs sampling draw
 \usage{
 ciGS(x, alpha)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{x}{
 Gibbs sampling output object

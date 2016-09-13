@@ -9,7 +9,7 @@ Function to derive a Wald confidence interval for expectation-maximization based
 \usage{
 ciEM(x, alpha, eps = 1e-04, expmethod = "PadeRBS")
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{x}{
 expectation-maximization output object
