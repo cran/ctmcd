@@ -37,7 +37,6 @@ Jon Fintzi, Marius Pfeuffer
 data(tm_abs)
 
 ## Initial guess for generator matrix (absorbing default state)
-data(tm_abs)
 
 gm=matrix(1,8,8)
 diag(gm)=0

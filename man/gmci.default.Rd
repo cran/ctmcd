@@ -4,7 +4,7 @@
 Confidence / Credibility Intervals for Generator Matrix Objects
 }
 \description{
-Function to derive confidence / credibility intervals for "EM" or "GS" based generator matrix objects
+Default function to derive confidence / credibility intervals for "EM" or "GS" based generator matrix objects
 }
 \usage{
 \method{gmci}{default}(gm, alpha, eps = 1e-04, expmethod = "PadeRBS", ...)

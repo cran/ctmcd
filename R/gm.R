@@ -1,3 +1,3 @@
 gm <-
-function(tm, ...)
-  UseMethod("gm")
+function(tm,te,method,...)
+    UseMethod("gm")

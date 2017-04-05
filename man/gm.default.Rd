@@ -5,12 +5,13 @@
 Generator Matrix Estimation
 }
 \description{
-Function to estimate the parameters of a continuous Markov chain
+Default function to estimate the parameters of a continuous Markov chain
 }
 \usage{
 \method{gm}{default}(tm, te, method, gmguess = NULL, prior = NULL, burnin = NULL, 
-eps = 1e-06, niter = 10000, sampl_func = NULL, combmat = NULL, sampl_method = "Unif", 
-logmethod = "Eigen", expmethod = "PadeRBS", verbose = FALSE, ...)
+eps = 1e-06, conv_pvalue = 0.05, conv_freq = 10, niter = 10000, sampl_func = NULL, 
+combmat = NULL, sampl_method = "Unif", logmethod = "Eigen", expmethod = "PadeRBS", 
+verbose = FALSE, ...)
 }
 
 \arguments{
@@ -34,6 +35,12 @@ burn-in period (if method is "GS")
 }
   \item{eps}{
 convergence criterion (if method is "EM" or "GS")
+}
+  \item{conv_pvalue}{
+convergence criterion: stop, if Heidelberger and Welch's diagnostic assumes convergence (see coda package)
+}
+ \item{conv_freq}{
+convergence criterion: absolute frequency of convergence evaluations
 }
   \item{niter}{
 maximum number of iterations (if method is "EM" or "GS")

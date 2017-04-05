@@ -2,17 +2,17 @@ Package: ctmcd
 Type: Package
 Title: Estimating the Parameters of a Continuous-Time Markov Chain from
         Discrete-Time Data
-Version: 1.0
-Date: 2016-09-13
+Version: 1.1
+Date: 2017-04-03
 Author: Marius Pfeuffer
 Maintainer: Marius Pfeuffer <marius.pfeuffer@fau.de>
 Description: Functions for estimating Markov generator matrices from discrete-time observations. The implemented approaches comprise diagonal adjustment, weighted adjustment and quasi-optimization of matrix logarithm based candidate solutions, an expectation-maximization algorithm as well as a Gibbs sampler.
 License: GPL-3
-Imports: Rcpp (>= 0.12.6), expm, numDeriv
+Imports: Rcpp (>= 0.12.10), coda, expm, numDeriv
 Suggests: knitr, rmarkdown
 LinkingTo: Rcpp, RcppArmadillo
 VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2016-09-13 12:36:20 UTC; Stefan
+Packaged: 2017-04-04 16:27:58 UTC; Stefan
 Repository: CRAN
-Date/Publication: 2016-09-13 21:19:15
+Date/Publication: 2017-04-05 12:57:30 UTC

@@ -8,8 +8,9 @@ Gibbs Sampler
 Function for deriving a Markov generator matrix estimate by Gibbs sampling (described by Bladt and Soerensen, 2005)
 }
 \usage{
-gmGS(tmabs, te, prior, burnin, eps = 1e-06, niter = 10000, sampl_method = "Unif", 
-expmethod = "PadeRBS", verbose = FALSE, combmat=NULL, sampl_func = NULL)
+gmGS(tmabs, te, prior, burnin, conv_pvalue = 0.05, conv_freq = 10,
+niter = 10000, sampl_method = "Unif", expmethod = "PadeRBS", verbose = FALSE, 
+combmat=NULL, sampl_func = NULL)
 }
 \arguments{
   \item{tmabs}{
@@ -24,8 +25,11 @@ list of prior parameters (Gamma prior)
   \item{burnin}{
 number of burn-in iterations
 }
-  \item{eps}{
-stop criterion: stop, if L1 metric between parameter estimates of subsequent iteration steps is below eps at least twice
+  \item{conv_pvalue}{
+convergence criterion: stop, if Heidelberger and Welch's diagnostic assumes convergence (see coda package)
+}
+ \item{conv_freq}{
+convergence criterion: absolute frequency of convergence evaluations
 }
   \item{niter}{
 stop criterion: stop, if maximum number of iterations is exceeded

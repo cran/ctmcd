@@ -1,3 +1,3 @@
 gmci <-
-function(gm, ...)
+function(gm,alpha,...) 
   UseMethod("gmci")
