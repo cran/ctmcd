@@ -66,4 +66,6 @@ R. B. Israel et al.: _Finding Generators for Markov Chains via Empirical Transit
 
 E. Kreinin and M. Sidelnikova: _Regularization Algorithms for Transition Matrices._ Algo Research Quarterly 4(1):23-40, 2001
 
+M. Pfeuffer: _ctmcd: An R Package for Estimating the Parameters of a Continuous-Time Markov Chain from Discrete-Time Data_ The R Journal (To Appear), 2017
+
 D. Oakes. _Direct calculation of the information matrix via the EM algorithm._ Journal of the Royal Statistical Society: Series B (Statistical Methodology), 61(2):479-482, 1999

@@ -1,4 +1,4 @@
-ciEM <-
+ciEMBS <-
 function (x, alpha, eps = 1e-04, expmethod = "PadeRBS") 
 {
     tmabs = x$tm

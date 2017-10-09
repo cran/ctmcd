@@ -14,13 +14,17 @@ Functions for estimating Markov generator matrices from discrete-time observatio
 Maintainer: \packageMaintainer{ctmcd}
 }
 \references{
-Y. Inamura: Estimating Continuous Time Transition Matrices from Discretely Observed Data. Bank of Japan Working Paper Series, 2006
+M. Pfeuffer: ctmcd: An R Package for Estimating the Parameters of a Continuous-Time Markov Chain from Discrete-Time Data. The R Journal (To Appear), 2017
+
+M. Pfeuffer. Generator Matrix Approximation Based on Discrete-Time Rating Migration Data. Master
+Thesis, Ludwig Maximilian University of Munich, 2016
 
 R. B. Israel et al.: Finding Generators for Markov Chains via Empirical Transition Matrices, with Applications to Credit Ratings. Mathematical Finance 11(2):245-265, 2001
 
 E. Kreinin and M. Sidelnikova: Regularization Algorithms for Transition Matrices. Algo Research Quarterly 4(1):23-40, 2001
 
 M. Bladt and M. Soerensen: Statistical Inference for Discretely Observed Markov Jump Processes. Journal of the Royal Statistical Society B 67(3):395-410, 2005
+
 }
 
 \keyword{ package }

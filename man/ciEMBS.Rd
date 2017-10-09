@@ -1,13 +1,13 @@
-\name{ciEM}
-\alias{ciEM}
+\name{ciEMBS}
+\alias{ciEMBS}
 \title{
 Wald Confidence Interval
 }
 \description{
-Function to derive a Wald confidence interval for expectation-maximization based maximum likelihood generator matrix estimate. The Fisher information estimation method of Oakes, 1999 is employed.
+Function to derive a Wald confidence interval for expectation-maximization based maximum likelihood generator matrix estimate. The Fisher information estimation method of Oakes, 1999 is employed and the numerical expressions of Bladt and Soerensen, 2009 are used.
 }
 \usage{
-ciEM(x, alpha, eps = 1e-04, expmethod = "PadeRBS")
+ciEMBS(x, alpha, eps = 1e-04, expmethod = "PadeRBS")
 }
 
 \arguments{
@@ -48,7 +48,7 @@ gm0[8,]=0
 gmem=gm(tm=tm_abs,te=1,method="EM",gmguess=gm0,verbose=TRUE)
 
 ## derive confidence interval
-ciem=ciEM(gmem, alpha=0.05)
+ciem=ciEMBS(gmem, alpha=0.05)
 ciem
 }
 }

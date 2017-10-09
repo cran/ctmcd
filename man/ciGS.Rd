@@ -29,6 +29,7 @@ Marius Pfeuffer
 }
 
 \examples{
+\dontrun{
 data(tm_abs)
 
 ## Prior
@@ -43,4 +44,5 @@ gmgs=gm(tm=tm_abs,te=1,method="GS",sampl_method="Unif",prior=pr,burnin=10,niter=
 
 cigs=ciGS(gmgs,alpha=.05)
 cigs
+}
 }
