@@ -1,5 +1,10 @@
 \name{gmci.default}
 \alias{gmci.default}
+\alias{ciEMBS}
+\alias{ciEMSdR}
+\alias{ciEMoFI}
+\alias{ciEMDM}
+\alias{ciGS}
 \title{
 Confidence / Credibility Intervals for Generator Matrix Objects
 }
@@ -7,7 +12,7 @@ Confidence / Credibility Intervals for Generator Matrix Objects
 Default function to derive confidence / credibility intervals for "EM" or "GS" based generator matrix objects
 }
 \usage{
-\method{gmci}{default}(gm, alpha, eps = 1e-04, cimethod="SdR", expmethod = "PadeRBS", ...)
+\method{gmci}{default}(gm, alpha, eps = 1e-04, cimethod="Direct", expmethod = "PadeRBS", ...)
 }
 \arguments{
   \item{gm}{
@@ -20,7 +25,7 @@ significance level
 threshold for which generator matrix parameters are assumed to be fixed at zero (if "EM" object)
 }
  \item{cimethod}{
-"SdR" for using the analytical expressions of Smith and dos Reis, 2017 or "BS" for the numerical expressions of Bladt and Soerensen, 2009 (if "EM" object)
+"Direct" or "SdR" use analytical expressions of the Fisher information matrix, "BS" emloy the numerical expressions of Bladt and Soerensen, 2009, "DM" uses the Delta Method for matrix exponential transformations (if "EM" object)
 }
   \item{expmethod}{
 method to compute matrix exponentials (see \code{?expm} from \code{expm} package for more information)
@@ -39,15 +44,13 @@ M. Bladt and M. Soerensen. Efficient Estimation of Transition Rates Between Cred
 
 D. Oakes. Direct calculation of the information matrix via the EM algorithm. Journal of the Royal Statistical Society: Series B (Statistical Methodology), 61(2):479-482, 1999
 
-G. Smith and G. dos Reis. Robust and Consistent Estimation of Generators in Credit Risk. Quantitative Finance (To Appear), 2017
+G. Smith and G. dos Reis. Robust and Consistent Estimation of Generators in Credit Risk. Quantitative Finance 18(6):983-1001, 2018
 }
 \author{
 Marius Pfeuffer
 }
 
-\seealso{
-\code{\link{ciEMSdR}}, \code{\link{ciEMBS}}, \code{\link{ciGS}}
-}
+
 \examples{
 \dontrun{
 data(tm_abs)

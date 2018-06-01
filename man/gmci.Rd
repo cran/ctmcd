@@ -46,9 +46,7 @@ G. Smith and G. dos Reis. Robust and Consistent Estimation of Generators in Cred
 Marius Pfeuffer
 }
 
-\seealso{
-\code{\link{ciEMSdR}}, \code{\link{ciEMBS}}, \code{\link{ciGS}}
-}
+
 \examples{
 \dontrun{
 data(tm_abs)

@@ -14,7 +14,7 @@ Functions for estimating Markov generator matrices from discrete-time observatio
 Maintainer: \packageMaintainer{ctmcd}
 }
 \references{
-M. Pfeuffer: ctmcd: An R Package for Estimating the Parameters of a Continuous-Time Markov Chain from Discrete-Time Data. The R Journal (To Appear), 2017
+M. Pfeuffer: ctmcd: An R Package for Estimating the Parameters of a Continuous-Time Markov Chain from Discrete-Time Data. The R Journal 9(2):127-141, 2017
 
 M. Pfeuffer. Generator Matrix Approximation Based on Discrete-Time Rating Migration Data. Master
 Thesis, Ludwig Maximilian University of Munich, 2016
