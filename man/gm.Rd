@@ -68,6 +68,9 @@ The methods "DA", "WA" and "QO" provide adjustments of a matrix logarithm based 
 
 
 \references{
+
+G. dos Reis, M. Pfeuffer, G. Smith: Capturing Rating Momentum in the Estimation of Probabilities of Default, With Application to Credit Rating Migrations (In Preparation), 2018
+
 M. Pfeuffer: Generator Matrix Approximation Based on Discrete Time Rating Migration Data. Master Thesis, University of Munich, 2016
 
 Y. Inamura: Estimating Continuous Time Transition Matrices from Discretely Observed Data. Bank of Japan Working Paper Series, 2006

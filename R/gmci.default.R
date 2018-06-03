@@ -11,10 +11,7 @@ gmci.default <-
       if(cimethod=="Direct"){
         limits = ciEMoFI(gm, alpha, eps, expmethod)
       }
-      if(cimethod=="DM"){
-        limits = ciEMDM(gm, alpha, eps, expmethod)
-      }
-      limits$method = "Wald Confidence Interval (Oakes Standard Error)"
+      limits$method = "Wald Confidence Interval"
     }
     if (gm$method == "Gibbs Sampler") {
       limits = ciGS(gm, alpha)

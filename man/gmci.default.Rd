@@ -25,7 +25,7 @@ significance level
 threshold for which generator matrix parameters are assumed to be fixed at zero (if "EM" object)
 }
  \item{cimethod}{
-"Direct" or "SdR" use analytical expressions of the Fisher information matrix, "BS" emloy the numerical expressions of Bladt and Soerensen, 2009, "DM" uses the Delta Method for matrix exponential transformations (if "EM" object)
+"Direct" or "SdR" use analytical expressions of the Fisher information matrix, "BS" emloy the numerical expressions of Bladt and Soerensen, 2009 (if "EM" object)
 }
   \item{expmethod}{
 method to compute matrix exponentials (see \code{?expm} from \code{expm} package for more information)
@@ -40,12 +40,9 @@ If gm is based on the "EM" method (expectation-maximization algorithm), the func
 
 \references{
 
-M. Bladt and M. Soerensen. Efficient Estimation of Transition Rates Between Credit Ratings from Observations at Discrete Time Points. Quantitative Finance, 9(2):147-160, 2009
-
-D. Oakes. Direct calculation of the information matrix via the EM algorithm. Journal of the Royal Statistical Society: Series B (Statistical Methodology), 61(2):479-482, 1999
-
-G. Smith and G. dos Reis. Robust and Consistent Estimation of Generators in Credit Risk. Quantitative Finance 18(6):983-1001, 2018
+G. dos Reis, M. Pfeuffer, G. Smith: Capturing Rating Momentum in the Estimation of Probabilities of Default, With Application to Credit Rating Migrations (In Preparation), 2018
 }
+
 \author{
 Marius Pfeuffer
 }
