@@ -94,11 +94,7 @@ tmci=function (gmem, alpha, te, eps = 1e-04, expmethod = "PadeRBS")
   SEmat = sqrt(SEmat)
   P = expm(Q * te)
   lowermat = P - qnorm(1 - signif_level/2) * SEmat
-  lowermat[which(SEmat == 0)] = NA
-  lowermat[which(diag(Q) == 0), ] = 0
   uppermat = P + qnorm(1 - signif_level/2) * SEmat
-  uppermat[which(SEmat == 0)] = NA
-  uppermat[which(diag(Q) == 0), ] = 0
   limits = list(lower = lowermat, upper = uppermat, SE = SEmat)
   limits$method=paste0(te, " Period Delta Method Confidence Interval")
   limits$par=expm(gmem$par*te)

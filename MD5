@@ -1,4 +1,4 @@
-9e6276edd4c37ad1b1ba959b17b180b6 *DESCRIPTION
+47682c52c3bbeea787bf03aae7de695d *DESCRIPTION
 cacd6005f6a6559737db049fa5a93e7c *NAMESPACE
 483c642d6db3f2169b4424f4f193bf0f *R/RcppExports.R
 a16fd38e3f3024583a0f375a4b91e681 *R/ciEMBS.R
@@ -22,8 +22,8 @@ cdd823ef614bc324c1ab0ae4281962aa *R/plotM.R
 c00159d58910bdba2684203a962395c1 *R/print.gm.R
 99d6174e20c206fa7daf4d8ce649311e *R/print.gmci.R
 d703e7010feac5020c5e87ff3c9188bc *R/summary.gm.R
-171d95098affffa67d3afbf921134cad *R/tmci.R
-6f139a072aea9c25d454796367b1ccbe *build/partial.rdb
+2aaba6ea4d0f8468fb3d88b612ef9748 *R/tmci.R
+51438f973193d4bb18238d04134f2848 *build/partial.rdb
 c71ce136fbb68909907932694b65d8f9 *build/vignette.rds
 d06464f8759c413f32ae4d09e9ba590d *data/tm_abs.rda
 30e91a3ca1df632906ba0a50d0be2da6 *inst/doc/RJ-2017-038.pdf
