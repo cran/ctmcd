@@ -1,4 +1,4 @@
-47682c52c3bbeea787bf03aae7de695d *DESCRIPTION
+04fd32ff52fc4a0be74e2e4ff21ae1f6 *DESCRIPTION
 cacd6005f6a6559737db049fa5a93e7c *NAMESPACE
 483c642d6db3f2169b4424f4f193bf0f *R/RcppExports.R
 a16fd38e3f3024583a0f375a4b91e681 *R/ciEMBS.R
@@ -23,7 +23,7 @@ c00159d58910bdba2684203a962395c1 *R/print.gm.R
 99d6174e20c206fa7daf4d8ce649311e *R/print.gmci.R
 d703e7010feac5020c5e87ff3c9188bc *R/summary.gm.R
 2aaba6ea4d0f8468fb3d88b612ef9748 *R/tmci.R
-51438f973193d4bb18238d04134f2848 *build/partial.rdb
+189bd0a5472433575270499f82c05453 *build/partial.rdb
 c71ce136fbb68909907932694b65d8f9 *build/vignette.rds
 d06464f8759c413f32ae4d09e9ba590d *data/tm_abs.rda
 30e91a3ca1df632906ba0a50d0be2da6 *inst/doc/RJ-2017-038.pdf
@@ -31,8 +31,8 @@ f416c029a5c53128d2e9fd50242c7a76 *inst/doc/RJ-2017-038.pdf.asis
 1539aa2af88dde207f1d558e9e676900 *inst/doc/ctmcd_vignette.R
 61e4fb7d4d75fb401be17c11226bd0fb *inst/doc/ctmcd_vignette.Rmd
 bd436fddd66e8db00ab9a7228a2cb0e8 *inst/doc/ctmcd_vignette.html
-b784a71a653a8377eb8591afd63a9ff9 *inst/include/ctmcd.h
-02f4420f28ec7fa9564585a6853c2fb3 *inst/include/ctmcd_RcppExports.h
+917b7dba7a9de2d1bf3002b6a2145871 *inst/include/ctmcd.h
+3b835783f7e1bad81f7f0f18e55926fa *inst/include/ctmcd_RcppExports.h
 69b1133bd2cf54e59f38d377dceb3540 *man/ctmcd-package.Rd
 fb9aa07d11eca80a32496fd79bbcbcb6 *man/ctmcdlogLik.Rd
 52fab1a2aa706ed79f57436bf8f2b12f *man/expmMC.Rd
