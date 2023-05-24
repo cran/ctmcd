@@ -53,6 +53,11 @@ interface for own endpoint-conditioned Markov process sampling function
 \details{
 A posterior mean generator matrix estimate is derived by Gibbs Sampling. The gamma distribution is used as prior.
 }
+
+
+\value{
+generator matrix estimate
+}
  
 \references{
 M. Bladt and M. Soerensen: Statistical Inference for Discretely Observed Markov Jump Processes. Journal of the Royal Statistical Society B 67(3):395-410, 2005
@@ -78,7 +83,7 @@ pr[[1]][8,]=0
 pr[[2]]=c(rep(5,7),Inf)
 
 ## Derive Gibbs sampling generator matrix estimate
-\dontrun{
+\donttest{
 gmgs=gmGS(tmabs=tm_abs,te=1,sampl_method="Unif",prior=pr,burnin=10,niter=100,verbose=TRUE)
 gmgs
 }

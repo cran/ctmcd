@@ -27,6 +27,11 @@ discrete-time transition probability matrix, matrix exponential of gm
 \details{
 Function for the simulation of paths from an endpoint-conditioned Markov process. Returns number of transitions NijT and cumulative holding times RiT.
 }
+
+\value{
+endpoint-conditioned sampling path
+}
+
 \references{
 J. Fintzi: R Package ECctmc, 2016.
 

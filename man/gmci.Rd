@@ -48,9 +48,12 @@ G. dos Reis, M. Pfeuffer, G. Smith: Capturing Rating Momentum in the Estimation 
 Marius Pfeuffer
 }
 
+\value{
+generator matrix confidence bounds
+}
 
 \examples{
-\dontrun{
+\donttest{
 data(tm_abs)
 
 ## Maximum Likelihood Generator Matrix Estimate

@@ -19,6 +19,10 @@ additional arguments
 }
 }
 
+\value{
+generator matrix
+}
+
 \seealso{
 \code{\link{summary.gm}}, \code{\link{plot.gm}}
 }

@@ -38,6 +38,10 @@ verbose mode
 \details{
 A maximum likelihood generator matrix estimate is derived by an instance of the expectation-maximization algorithm. 
 }
+
+\value{
+generator matrix estimate
+}
 \references{
 M. Bladt and M. Soerensen: Statistical Inference for Discretely Observed Markov Jump Processes. Journal of the Royal Statistical Society B 67(3):395-410, 2005
 

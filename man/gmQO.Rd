@@ -23,6 +23,10 @@ method for computation of matrix logarithm, by default eigendecomposition is cho
 \details{
 From the set of possible Markov generator matrices, the one is chosen which is closest to a matrix logarithm based candidate solution in terms of sum of squared deviations.
 }
+
+\value{
+generator matrix estimate
+}
 \references{
 E. Kreinin and M. Sidelnikova: Regularization Algorithms for Transition Matrices. Algo Research Quarterly 4(1):23-40, 2001
 }

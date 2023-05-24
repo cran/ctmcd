@@ -8,7 +8,7 @@ Check these declarations against the C/Fortran source code.
 */
 
 /* .Call calls */
-extern SEXP ctmcd_RcppExport_registerCCallable();
+extern SEXP ctmcd_RcppExport_registerCCallable(void);
 extern SEXP ctmcd_rNijTRiT_ModRej(SEXP, SEXP, SEXP);
 extern SEXP ctmcd_rNijTRiT_Unif(SEXP, SEXP, SEXP, SEXP);
 

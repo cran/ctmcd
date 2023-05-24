@@ -30,6 +30,11 @@ J. Fintzi: R Package ECctmc, 2016.
 
 A. Hobolth and E. A. Stone: Simulation from Endpoint-Conditioned, Continuous-Time Markov Chains on a Finite State Space, with Applications to Molecular Evolution. Annals of Applied Statistics 3(3):1204-1231, 2009
 }
+
+\value{
+endpoint-conditioned sampling path
+}
+
 \author{
 Jon Fintzi, Marius Pfeuffer
 }

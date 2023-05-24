@@ -67,6 +67,9 @@ The methods "DA", "WA" and "QO" provide adjustments of a matrix logarithm based 
 }
 
 
+\value{
+generator matrix estimate
+}
 \references{
 
 G. dos Reis, M. Pfeuffer, G. Smith: Capturing Rating Momentum in the Estimation of Probabilities of Default, With Application to Credit Rating Migrations (In Preparation), 2018

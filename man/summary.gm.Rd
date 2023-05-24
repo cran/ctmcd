@@ -19,6 +19,11 @@ a generator matrix estimation object
 additional arguments
 }
 }
+
+\value{
+estimation summary
+}
+
 \seealso{
 \code{\link{print.gm}}, \code{\link{plot.gm}}
 }

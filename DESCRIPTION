@@ -2,17 +2,26 @@ Package: ctmcd
 Type: Package
 Title: Estimating the Parameters of a Continuous-Time Markov Chain from
         Discrete-Time Data
-Version: 1.4.2
-Date: 2022-05-25
-Author: Marius Pfeuffer [aut,cre], Greig Smith [ctb], Goncalo dos Reis [ctb], Linda Moestel [ctb], Matthias Fischer [ctb]
-Maintainer: Marius Pfeuffer <marius.pfeuffer@fau.de>
-Description: Functions for estimating Markov generator matrices from discrete-time observations. The implemented approaches comprise diagonal adjustment, weighted adjustment and quasi-optimization of matrix logarithm based candidate solutions, an expectation-maximization algorithm as well as a Gibbs sampler.
+Version: 1.4.3
+Date: 2023-05-24
+Authors@R: c(person("Marius", "Pfeuffer", email = "marius.pfeuffer@fau.de", role = c("aut", "cre")),
+    person("Greig", "Smith", role = "ctb"),
+    person("Goncalo", "dos Reis", role = "ctb"),
+    person("Linda", "Moestel", role = "ctb"),
+    person("Matthias", "Fischer", role = "ctb"))
+Description: Estimation of Markov generator matrices from discrete-time observations. The implemented approaches comprise diagonal and weighted adjustment of matrix logarithm based candidate solutions as in Israel (2001) <doi:10.1111/1467-9965.00114> as well as a quasi-optimization approach. Moreover, the expectation-maximization algorithm and the Gibbs sampling approach of Bladt and Sorensen (2005) <doi:10.1111/j.1467-9868.2005.00508.x> are included.
 License: GPL-3
 Imports: Rcpp (>= 0.12.17), coda, expm, numDeriv
 Suggests: knitr, rmarkdown, R.rsp
 LinkingTo: Rcpp, RcppArmadillo
 VignetteBuilder: knitr, R.rsp
 NeedsCompilation: yes
-Packaged: 2022-05-25 20:30:04 UTC; Stefan
+Packaged: 2023-05-24 10:03:52 UTC; Stefan
+Author: Marius Pfeuffer [aut, cre],
+  Greig Smith [ctb],
+  Goncalo dos Reis [ctb],
+  Linda Moestel [ctb],
+  Matthias Fischer [ctb]
+Maintainer: Marius Pfeuffer <marius.pfeuffer@fau.de>
 Repository: CRAN
-Date/Publication: 2022-05-26 14:30:04 UTC
+Date/Publication: 2023-05-24 11:30:03 UTC

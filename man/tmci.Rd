@@ -30,12 +30,16 @@ method to compute matrix exponentials (see \code{?expm} from \code{expm} package
 Confidence intervals for discrete-time transition matrix predictions given generator matrix estimates are computed by using the delta method for matrix exponential transformations. 
 }
 
+\value{
+transition matrix confidence bounds
+}
+
 \references{
 G. dos Reis, M. Pfeuffer, G. Smith: Capturing Rating Momentum in the Estimation of Probabilities of Default, With Application to Credit Rating Migrations (In Preparation), 2018
 }
 
 \examples{
-\dontrun{
+\donttest{
 data(tm_abs)
 
 ## Maximum Likelihood Generator Matrix Estimate

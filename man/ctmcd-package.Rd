@@ -30,7 +30,7 @@ M. Bladt and M. Soerensen: Statistical Inference for Discretely Observed Markov 
 \keyword{ package }
 
 \examples{
-\dontrun{
+\donttest{
 data(tm_abs)
 
 ## Maximum Likelihood Generator Matrix Estimate

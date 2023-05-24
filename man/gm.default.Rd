@@ -70,7 +70,9 @@ additional arguments
 \details{
 The methods "DA", "WA" and "QO" provide adjustments of a matrix logarithm based candidate solution, "EM" gives the maximum likelihood estimate and "GS" a posterior mean estimate in a Bayesian setting with conjugate Gamma priors.
 }
-
+\value{
+generator matrix estimate
+}
 
 \references{
 M. Pfeuffer: Generator Matrix Approximation Based on Discrete Time Rating Migration Data. Master Thesis, University of Munich, 2016

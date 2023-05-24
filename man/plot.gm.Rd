@@ -53,6 +53,11 @@ additional arguments
 }
 }
 
+
+\value{
+no value, plot function
+}
+
 \author{
 Marius Pfeuffer
 }

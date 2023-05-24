@@ -15,6 +15,12 @@ a generator matrix confidence / credibility interval
   \item{\dots}{
 additional arguments
 }
-}\seealso{
+}
+
+\value{
+generator matrix confidence bounds
+}
+
+\seealso{
 \code{\link{plot.gmci}}
 }

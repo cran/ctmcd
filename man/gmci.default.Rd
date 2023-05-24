@@ -38,6 +38,9 @@ additional arguments
 If gm is based on the "EM" method (expectation-maximization algorithm), the function computes a Wald confidence interval based on the method of Oakes, 1999. IF gm is based on the "GS" method (Gibbs sampler), the function computes an equal-tailed credibility interval.
 }
 
+\value{
+generator matrix confidence bounds
+}
 \references{
 
 G. dos Reis, M. Pfeuffer, G. Smith: Capturing Rating Momentum in the Estimation of Probabilities of Default, With Application to Credit Rating Migrations (In Preparation), 2018
@@ -49,7 +52,7 @@ Marius Pfeuffer
 
 
 \examples{
-\dontrun{
+\donttest{
 data(tm_abs)
 
 ## Maximum Likelihood Generator Matrix Estimate

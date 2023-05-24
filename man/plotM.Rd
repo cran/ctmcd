@@ -48,6 +48,11 @@ number of significant figures to be plotted
 two element vector for specification of opacity for positive and negative parameter entry highlighting (must be greater than zero)
 }
 }
+
+\value{
+no value, plot function
+}
+
 \author{
 Marius Pfeuffer
 }\seealso{

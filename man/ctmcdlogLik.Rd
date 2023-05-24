@@ -22,6 +22,9 @@ time elapsed in transition process
 }
  
 }
+\value{
+log-likelihood value
+}
 \author{
 Marius Pfeuffer
 }

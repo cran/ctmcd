@@ -23,6 +23,11 @@ method for computation of matrix logarithm, by default eigendecomposition is cho
 \details{
 A candidate solution is derived by the matrix logarithm and then adjusted in order to fulfil the properties of a Markov generator matrix.
 }
+
+\value{
+generator matrix estimate
+}
+
 \references{
 R. B. Israel et al.: Finding Generators for Markov Chains via Empirical Transition Matrices, with Applications to Credit Ratings. Mathematical Finance 11(2):245-265, 2001
 }

@@ -54,6 +54,10 @@ two element vector for specification of opacity for positive and negative parame
 additional arguments
 }
 }
+
+\value{
+no value, plot function
+}
 \author{
 Marius Pfeuffer
 }
@@ -61,7 +65,7 @@ Marius Pfeuffer
 \code{\link{print.gmci}}, \code{\link{plotM}}
 }
 \examples{
-\dontrun{
+\donttest{
 data(tm_abs)
 
 ## Maximum Likelihood Generator Matrix Estimate
