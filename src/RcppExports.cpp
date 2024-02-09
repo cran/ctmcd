@@ -8,9 +8,14 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // rNijTRiT_ModRej
 RcppExport SEXP rNijTRiT_ModRej(const NumericMatrix tmabs, const double te, const Rcpp::NumericMatrix gm);
-static SEXP ctmcd_rNijTRiT_ModRej_try(SEXP tmabsSEXP, SEXP teSEXP, SEXP gmSEXP) {
+static SEXP _ctmcd_rNijTRiT_ModRej_try(SEXP tmabsSEXP, SEXP teSEXP, SEXP gmSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::traits::input_parameter< const NumericMatrix >::type tmabs(tmabsSEXP);
@@ -20,29 +25,33 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP_RETURN_ERROR
 }
-RcppExport SEXP ctmcd_rNijTRiT_ModRej(SEXP tmabsSEXP, SEXP teSEXP, SEXP gmSEXP) {
+RcppExport SEXP _ctmcd_rNijTRiT_ModRej(SEXP tmabsSEXP, SEXP teSEXP, SEXP gmSEXP) {
     SEXP rcpp_result_gen;
     {
         Rcpp::RNGScope rcpp_rngScope_gen;
-        rcpp_result_gen = PROTECT(ctmcd_rNijTRiT_ModRej_try(tmabsSEXP, teSEXP, gmSEXP));
+        rcpp_result_gen = PROTECT(_ctmcd_rNijTRiT_ModRej_try(tmabsSEXP, teSEXP, gmSEXP));
     }
     Rboolean rcpp_isInterrupt_gen = Rf_inherits(rcpp_result_gen, "interrupted-error");
     if (rcpp_isInterrupt_gen) {
         UNPROTECT(1);
         Rf_onintr();
     }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
+    }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
         SEXP rcpp_msgSEXP_gen = Rf_asChar(rcpp_result_gen);
         UNPROTECT(1);
-        Rf_error(CHAR(rcpp_msgSEXP_gen));
+        Rf_error("%s", CHAR(rcpp_msgSEXP_gen));
     }
     UNPROTECT(1);
     return rcpp_result_gen;
 }
 // rNijTRiT_Unif
 RcppExport SEXP rNijTRiT_Unif(const arma::mat tmabs, const double te, const arma::mat gm, const arma::mat tpm);
-static SEXP ctmcd_rNijTRiT_Unif_try(SEXP tmabsSEXP, SEXP teSEXP, SEXP gmSEXP, SEXP tpmSEXP) {
+static SEXP _ctmcd_rNijTRiT_Unif_try(SEXP tmabsSEXP, SEXP teSEXP, SEXP gmSEXP, SEXP tpmSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::traits::input_parameter< const arma::mat >::type tmabs(tmabsSEXP);
@@ -53,29 +62,33 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP_RETURN_ERROR
 }
-RcppExport SEXP ctmcd_rNijTRiT_Unif(SEXP tmabsSEXP, SEXP teSEXP, SEXP gmSEXP, SEXP tpmSEXP) {
+RcppExport SEXP _ctmcd_rNijTRiT_Unif(SEXP tmabsSEXP, SEXP teSEXP, SEXP gmSEXP, SEXP tpmSEXP) {
     SEXP rcpp_result_gen;
     {
         Rcpp::RNGScope rcpp_rngScope_gen;
-        rcpp_result_gen = PROTECT(ctmcd_rNijTRiT_Unif_try(tmabsSEXP, teSEXP, gmSEXP, tpmSEXP));
+        rcpp_result_gen = PROTECT(_ctmcd_rNijTRiT_Unif_try(tmabsSEXP, teSEXP, gmSEXP, tpmSEXP));
     }
     Rboolean rcpp_isInterrupt_gen = Rf_inherits(rcpp_result_gen, "interrupted-error");
     if (rcpp_isInterrupt_gen) {
         UNPROTECT(1);
         Rf_onintr();
     }
+    bool rcpp_isLongjump_gen = Rcpp::internal::isLongjumpSentinel(rcpp_result_gen);
+    if (rcpp_isLongjump_gen) {
+        Rcpp::internal::resumeJump(rcpp_result_gen);
+    }
     Rboolean rcpp_isError_gen = Rf_inherits(rcpp_result_gen, "try-error");
     if (rcpp_isError_gen) {
         SEXP rcpp_msgSEXP_gen = Rf_asChar(rcpp_result_gen);
         UNPROTECT(1);
-        Rf_error(CHAR(rcpp_msgSEXP_gen));
+        Rf_error("%s", CHAR(rcpp_msgSEXP_gen));
     }
     UNPROTECT(1);
     return rcpp_result_gen;
 }
 
 // validate (ensure exported C++ functions exist before calling them)
-static int ctmcd_RcppExport_validate(const char* sig) { 
+static int _ctmcd_RcppExport_validate(const char* sig) { 
     static std::set<std::string> signatures;
     if (signatures.empty()) {
         signatures.insert("RcppExport SEXP(*rNijTRiT_ModRej)(const NumericMatrix,const double,const Rcpp::NumericMatrix)");
@@ -85,9 +98,21 @@ static int ctmcd_RcppExport_validate(const char* sig) {
 }
 
 // registerCCallable (register entry points for exported C++ functions)
-RcppExport SEXP ctmcd_RcppExport_registerCCallable() { 
-    R_RegisterCCallable("ctmcd", "ctmcd_rNijTRiT_ModRej", (DL_FUNC)ctmcd_rNijTRiT_ModRej_try);
-    R_RegisterCCallable("ctmcd", "ctmcd_rNijTRiT_Unif", (DL_FUNC)ctmcd_rNijTRiT_Unif_try);
-    R_RegisterCCallable("ctmcd", "ctmcd_RcppExport_validate", (DL_FUNC)ctmcd_RcppExport_validate);
+RcppExport SEXP _ctmcd_RcppExport_registerCCallable() { 
+    R_RegisterCCallable("ctmcd", "_ctmcd_rNijTRiT_ModRej", (DL_FUNC)_ctmcd_rNijTRiT_ModRej_try);
+    R_RegisterCCallable("ctmcd", "_ctmcd_rNijTRiT_Unif", (DL_FUNC)_ctmcd_rNijTRiT_Unif_try);
+    R_RegisterCCallable("ctmcd", "_ctmcd_RcppExport_validate", (DL_FUNC)_ctmcd_RcppExport_validate);
     return R_NilValue;
+}
+
+static const R_CallMethodDef CallEntries[] = {
+    {"_ctmcd_rNijTRiT_ModRej", (DL_FUNC) &_ctmcd_rNijTRiT_ModRej, 3},
+    {"_ctmcd_rNijTRiT_Unif", (DL_FUNC) &_ctmcd_rNijTRiT_Unif, 4},
+    {"_ctmcd_RcppExport_registerCCallable", (DL_FUNC) &_ctmcd_RcppExport_registerCCallable, 0},
+    {NULL, NULL, 0}
+};
+
+RcppExport void R_init_ctmcd(DllInfo *dll) {
+    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
+    R_useDynamicSymbols(dll, FALSE);
 }

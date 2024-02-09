@@ -17,7 +17,7 @@ namespace ctmcd {
             require("ctmcd", Rcpp::Named("quietly") = true);
             typedef int(*Ptr_validate)(const char*);
             static Ptr_validate p_validate = (Ptr_validate)
-                R_GetCCallable("ctmcd", "ctmcd_RcppExport_validate");
+                R_GetCCallable("ctmcd", "_ctmcd_RcppExport_validate");
             if (!p_validate(sig)) {
                 throw Rcpp::function_not_exported(
                     "C++ function with signature '" + std::string(sig) + "' not found in ctmcd");
@@ -30,17 +30,19 @@ namespace ctmcd {
         static Ptr_rNijTRiT_ModRej p_rNijTRiT_ModRej = NULL;
         if (p_rNijTRiT_ModRej == NULL) {
             validateSignature("RcppExport SEXP(*rNijTRiT_ModRej)(const NumericMatrix,const double,const Rcpp::NumericMatrix)");
-            p_rNijTRiT_ModRej = (Ptr_rNijTRiT_ModRej)R_GetCCallable("ctmcd", "ctmcd_rNijTRiT_ModRej");
+            p_rNijTRiT_ModRej = (Ptr_rNijTRiT_ModRej)R_GetCCallable("ctmcd", "_ctmcd_rNijTRiT_ModRej");
         }
         RObject rcpp_result_gen;
         {
             RNGScope RCPP_rngScope_gen;
-            rcpp_result_gen = p_rNijTRiT_ModRej(Rcpp::wrap(tmabs), Rcpp::wrap(te), Rcpp::wrap(gm));
+            rcpp_result_gen = p_rNijTRiT_ModRej(Shield<SEXP>(Rcpp::wrap(tmabs)), Shield<SEXP>(Rcpp::wrap(te)), Shield<SEXP>(Rcpp::wrap(gm)));
         }
         if (rcpp_result_gen.inherits("interrupted-error"))
             throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
         if (rcpp_result_gen.inherits("try-error"))
-            throw Rcpp::exception(as<std::string>(rcpp_result_gen).c_str());
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
         return Rcpp::as<RcppExport SEXP >(rcpp_result_gen);
     }
 
@@ -49,17 +51,19 @@ namespace ctmcd {
         static Ptr_rNijTRiT_Unif p_rNijTRiT_Unif = NULL;
         if (p_rNijTRiT_Unif == NULL) {
             validateSignature("RcppExport SEXP(*rNijTRiT_Unif)(const arma::mat,const double,const arma::mat,const arma::mat)");
-            p_rNijTRiT_Unif = (Ptr_rNijTRiT_Unif)R_GetCCallable("ctmcd", "ctmcd_rNijTRiT_Unif");
+            p_rNijTRiT_Unif = (Ptr_rNijTRiT_Unif)R_GetCCallable("ctmcd", "_ctmcd_rNijTRiT_Unif");
         }
         RObject rcpp_result_gen;
         {
             RNGScope RCPP_rngScope_gen;
-            rcpp_result_gen = p_rNijTRiT_Unif(Rcpp::wrap(tmabs), Rcpp::wrap(te), Rcpp::wrap(gm), Rcpp::wrap(tpm));
+            rcpp_result_gen = p_rNijTRiT_Unif(Shield<SEXP>(Rcpp::wrap(tmabs)), Shield<SEXP>(Rcpp::wrap(te)), Shield<SEXP>(Rcpp::wrap(gm)), Shield<SEXP>(Rcpp::wrap(tpm)));
         }
         if (rcpp_result_gen.inherits("interrupted-error"))
             throw Rcpp::internal::InterruptedException();
+        if (Rcpp::internal::isLongjumpSentinel(rcpp_result_gen))
+            throw Rcpp::LongjumpException(rcpp_result_gen);
         if (rcpp_result_gen.inherits("try-error"))
-            throw Rcpp::exception(as<std::string>(rcpp_result_gen).c_str());
+            throw Rcpp::exception(Rcpp::as<std::string>(rcpp_result_gen).c_str());
         return Rcpp::as<RcppExport SEXP >(rcpp_result_gen);
     }
 

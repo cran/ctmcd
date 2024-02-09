@@ -18,15 +18,9 @@ significance level
 }
 \item{...}{additional arguments:
 \itemize{
-  \item{eps:}{
-threshold for which generator matrix parameters are assumed to be fixed at zero (if "EM" object)
-}
-\item{cimethod:}{
-"Direct" and "SdR" use analytical expressions of the Fisher information matrix, "BS" employs the numerical approach of Bladt and Soerensen, 2009 (if "EM" object)
-}
-  \item{expmethod:}{
-method to compute matrix exponentials (see \code{?expm} from \code{expm} package for more information)
-}
+  \item eps: threshold for which generator matrix parameters are assumed to be fixed at zero (if "EM" object)
+\item cimethod: "Direct" and "SdR" use analytical expressions of the Fisher information matrix, "BS" employs the numerical approach of Bladt and Soerensen, 2009 (if "EM" object)
+  \item expmethod: method to compute matrix exponentials (see \code{?expm} from \code{expm} package for more information)
 }
 }
 }

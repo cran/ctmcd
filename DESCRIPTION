@@ -2,8 +2,8 @@ Package: ctmcd
 Type: Package
 Title: Estimating the Parameters of a Continuous-Time Markov Chain from
         Discrete-Time Data
-Version: 1.4.3
-Date: 2023-05-24
+Version: 1.4.4
+Date: 2024-02-07
 Authors@R: c(person("Marius", "Pfeuffer", email = "marius.pfeuffer@fau.de", role = c("aut", "cre")),
     person("Greig", "Smith", role = "ctb"),
     person("Goncalo", "dos Reis", role = "ctb"),
@@ -11,12 +11,12 @@ Authors@R: c(person("Marius", "Pfeuffer", email = "marius.pfeuffer@fau.de", role
     person("Matthias", "Fischer", role = "ctb"))
 Description: Estimation of Markov generator matrices from discrete-time observations. The implemented approaches comprise diagonal and weighted adjustment of matrix logarithm based candidate solutions as in Israel (2001) <doi:10.1111/1467-9965.00114> as well as a quasi-optimization approach. Moreover, the expectation-maximization algorithm and the Gibbs sampling approach of Bladt and Sorensen (2005) <doi:10.1111/j.1467-9868.2005.00508.x> are included.
 License: GPL-3
-Imports: Rcpp (>= 0.12.17), coda, expm, numDeriv
+Imports: Rcpp (>= 1.0.12), coda, expm, numDeriv
 Suggests: knitr, rmarkdown, R.rsp
 LinkingTo: Rcpp, RcppArmadillo
 VignetteBuilder: knitr, R.rsp
 NeedsCompilation: yes
-Packaged: 2023-05-24 10:03:52 UTC; Stefan
+Packaged: 2024-02-08 18:35:26 UTC; Stefan
 Author: Marius Pfeuffer [aut, cre],
   Greig Smith [ctb],
   Goncalo dos Reis [ctb],
@@ -24,4 +24,4 @@ Author: Marius Pfeuffer [aut, cre],
   Matthias Fischer [ctb]
 Maintainer: Marius Pfeuffer <marius.pfeuffer@fau.de>
 Repository: CRAN
-Date/Publication: 2023-05-24 11:30:03 UTC
+Date/Publication: 2024-02-09 09:40:02 UTC

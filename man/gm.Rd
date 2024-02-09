@@ -23,42 +23,19 @@ method to derive generator matrix: "DA" - Diagonal Adjustment, "WA" - Weighted A
 }
  \item{...}{Additional Arguments:
  \itemize{
-  \item{gmguess:}{
-initial guess for generator matrix estimation procedure (if method is "EM")
-}
-  \item{prior:}{
-prior parametrization (if method is "GS")
-}
-  \item{burnin:}{
-burn-in period (if method is "GS")
-}
-  \item{eps:}{
-convergence criterion (if method is "EM")
-}
-  \item{conv_pvalue,conv_freq:}{
-convergence criterion (if method is "GS")
-  }
-  \item{niter:}{
-maximum number of iterations (if method is "EM" or "GS")
-}
-  \item{sampl_func:}{
-optional self-written path sampling function for endpoint-conditioned Markov processes (if method is "GS")
-}
-  \item{combmat:}{
-matrix stating combined use of modified rejection sampling / uniformization sampling algorithms (if method is "GS")
-}
-  \item{sampl_method:}{
-sampling method for deriving endpoint-conditioned Markov process path: "Unif" - Uniformization Sampling, "ModRej" - Modified Rejection Sampling (if method is "GS")
-}
-  \item{logmethod:}{
-method to compute matrix logarithm (if method is "DA", "WA" or "QO", see \code{?logm} from \code{expm} package for more information)
-}
-  \item{expmethod:}{
-method to compute matrix exponential (if method is "EM" or "GS", see \code{?expm} from \code{expm} package for more information)
-}
-  \item{verbose:}{
+  \item gmguess: initial guess for generator matrix estimation procedure (if method is "EM")
+  \item prior: prior parametrization (if method is "GS")
+  \item burnin: burn-in period (if method is "GS")
+  \item eps: convergence criterion (if method is "EM")
+  \item conv_pvalue,conv_freq: convergence criterion (if method is "GS")
+  \item niter: maximum number of iterations (if method is "EM" or "GS")
+  \item sampl_func: optional self-written path sampling function for endpoint-conditioned Markov processes (if method is "GS")
+  \item combmat: matrix stating combined use of modified rejection sampling / uniformization sampling algorithms (if method is "GS")
+  \item sampl_method: sampling method for deriving endpoint-conditioned Markov process path: "Unif" - Uniformization Sampling, "ModRej" - Modified Rejection Sampling (if method is "GS")
+  \item logmethod: method to compute matrix logarithm (if method is "DA", "WA" or "QO", see \code{?logm} from \code{expm} package for more information)
+  \item expmethod: method to compute matrix exponential (if method is "EM" or "GS", see \code{?expm} from \code{expm} package for more information)
+  \item verbose: 
 verbose mode (if method is "EM" or "GS")
-}
 }
 }
 }
